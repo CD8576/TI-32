@@ -23,8 +23,8 @@
 #include "./camera_index.h"
 #endif
 
-constexpr auto TIP = D1;
-constexpr auto RING = D10;
+constexpr auto TIP = D+;
+constexpr auto RING = D-;
 constexpr auto MAXHDRLEN = 16;
 constexpr auto MAXDATALEN = 4096;
 constexpr auto MAXARGS = 5;
