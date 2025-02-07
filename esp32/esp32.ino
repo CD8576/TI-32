@@ -553,6 +553,20 @@ int makeRequest(String url, char *result, int resultLen, size_t *len)
 
 void connect()
 {
+    int numberOfNetworks = WiFi.scanNetworks();
+
+  Serial.print("Found ");
+  Serial.print(numberOfNetworks);
+  Serial.println(" Networks");
+  for (int i = 0; i < numberOfNetworks; i++)
+  {
+
+    Serial.print("SSID: ");
+    Serial.println(WiFi.SSID(i));
+    Serial.print("Signal strength: ");
+    Serial.println(WiFi.RSSI(i));
+    Serial.println("-----------------------");
+  }
   const char *ssid = WIFI_SSID;
   const char *pass = WIFI_PASS;
   Serial.print("SSID: ");
