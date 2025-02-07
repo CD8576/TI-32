@@ -7,9 +7,7 @@
 #include <TICL.h>
 #include <CBL2.h>
 #include <TIVar.h>
-#include <WiFi.h>
-#include <WiFiClientSecure.h>
-#include <WiFiClient.h>
+#include <ESP8266WiFi.h>
 #include <HTTPClient.h>
 #include <UrlEncode.h>
 #include <Preferences.h>
