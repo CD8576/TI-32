@@ -1,0 +1,26 @@
+#include "ESP8266WiFi.h"
+
+void setup()
+{
+  Serial.begin(115200);
+  Serial.println();
+}
+
+void loop()
+{
+  int numberOfNetworks = WiFi.scanNetworks();
+
+  Serial.print("Found ");
+  Serial.print(numberOfNetworks);
+  Serial.println(" Networks");
+  for (int i = 0; i < numberOfNetworks; i++)
+  {
+
+    Serial.print("SSID: ");
+    Serial.println(WiFi.SSID(i));
+    Serial.print("Signal strength: ");
+    Serial.println(WiFi.RSSI(i));
+    Serial.println("-----------------------");
+  }
+  delay(2000);
+}
